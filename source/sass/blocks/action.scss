@@ -1,0 +1,15 @@
+.action {
+  min-height: 500px;
+  background-image: url("../img/action/action-bg.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+
+  &__header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    @include rem(margin-bottom, 80px);
+  }
+}
