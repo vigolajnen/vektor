@@ -1,3 +1,156 @@
 .page-footer {
+  @include rem(padding, 60px 0);
+  background-color: #303030;
+  color: #ffffff;
 
+  &__inner {
+    max-width: 1175px;
+    width: 100%;
+    margin: 0 auto;
+    @include rem(padding, 0 15px);
+
+    display: flex;
+    flex-direction: column;
+  }
+  &__row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  &__logo {
+    width: 100%;
+
+    @media (min-width: $mobile-width-x) {
+      width: 25%;
+    }
+    @media (min-width: $tablet-width) {
+      width: 20%;
+    }
+  }
+  &__info {
+    width: 100%;
+
+    @include ff(
+      "font-size",
+      (
+        768px: 14px,
+        1900px: 16px
+      )
+    );
+    line-height: 19px;
+
+    @media (min-width: $mobile-width-x) {
+      width: 25%;
+      text-align: right;
+    }
+    @media (min-width: $tablet-width) {
+      width: 20%;
+    }
+  }
+  &__number {
+    @include rem(margin-bottom, 20px);
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    width: 100%;
+
+    @include ff(
+      "font-size",
+      (
+        768px: 14px,
+        1280px: 17px,
+        1900px: 19px
+      )
+    );
+    line-height: 100%;
+
+    @media (min-width: $mobile-width-x) {
+      width: 50%;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 60%;
+    }
+  }
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+
+    @include listReset();
+  }
+
+  &__item {
+    width: 100%;
+    @include rem(margin-bottom, 20px);
+
+    @media (min-width: $mobile-width-x) {
+      width: 50%;
+    }
+
+    @media (min-width: $desktop-width) {
+      width: calc(100% / 3);
+    }
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+
+    text-decoration: none;
+    color: #ffffff;
+  }
+  &__contacts {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+
+    @include ff(
+      "font-size",
+      (
+        768px: 14px,
+        1900px: 16px
+      )
+    );
+    line-height: 19px;
+
+
+    @media (min-width: $tablet-width) {
+      width: 75%;
+    }
+    @media (min-width: $desktop-width) {
+      width: 80%;
+    }
+  }
+  &__address {
+    font-weight: 600;
+  }
+  &__icon {
+    @include rem(margin, 0 10px);
+    fill: #ffffff;
+  }
+  &__copyright {
+    width: 100%;
+
+    @include ff(
+      "font-size",
+      (
+        768px: 14px,
+        1900px: 16px
+      )
+    );
+    line-height: 19px;
+
+    @media (min-width: $tablet-width) {
+      width: 20%;
+      text-align: right;
+    }
+    @media (min-width: $desktop-width) {
+      width: 20%;
+    }
+  }
 }
