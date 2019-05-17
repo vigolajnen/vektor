@@ -4,6 +4,10 @@
   min-height: 0;
   overflow: hidden;
 
+  &__caption {
+    @include rem(margin, 0 0 20px 0);
+  }
+
   &__wrapper {
     position: relative;
     display: flex;
@@ -60,26 +64,27 @@
     }
   }
 
-  &__input {
+  &__field {
     width: 100%;
+    background: #FEFEFE;
 
     @include rem(
       (
         padding: 10px 20px,
-        border: 1px solid #b3bbc9,
-        border-radius: 25px
+        border: 1px solid #F3D328,
+        border-radius: 0
       )
     );
 
     transition: 0.6s;
 
     &::placeholder {
-      color: #b3bbc9;
+      color: #283238;
     }
 
     &:hover,
     &:focus {
-      border: 1px solid #b3bbc9;
+      border: 1px solid #F3D328;
     }
 
     &:focus::placeholder {
@@ -113,7 +118,7 @@
   }
 
   & .button {
-    @include rem(padding, 5px 30px 15px);
+    @include rem(padding, 15px 30px);
   }
 
   & .select__gap {
