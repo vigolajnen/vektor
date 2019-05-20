@@ -1,9 +1,12 @@
 .door-types {
+  @include rem(padding-top, 80px);
+
   min-height: 500px;
-  background-image: url("../img/door-types/door-types-bg.png");
+  background-image: url('../img/door-types/door-types-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #e5e5e5;
 
   &__header {
     display: flex;
@@ -11,5 +14,51 @@
     align-items: center;
 
     @include rem(margin-bottom, 80px);
+  }
+
+  &__inner {
+    @include rem(padding-bottom, 80px);
+  }
+
+  &__list {
+    @include listReset();
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    order: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 45%;
+    transition: 1s;
+   
+    @media(min-width: $tablet-width) {
+      order: 0;
+      width: 25%;
+    }
+
+    &--logo {
+      order: 0;
+      width: 100%;
+      @media (min-width: $tablet-width) {
+        width: 50%;
+      }
+    }
+  }
+
+  &__pic {
+    @include rem(margin-bottom, 20px);
+  }
+
+  &__name {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 100%;
+    color: #000000;
   }
 }

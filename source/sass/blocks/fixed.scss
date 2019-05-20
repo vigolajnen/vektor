@@ -14,7 +14,7 @@
 
 
   @media(min-width: $tablet-width) {
-    @include rem(height, 100px);
+    @include rem(height, 50px);
   }
 }
 

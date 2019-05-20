@@ -15,7 +15,7 @@
 
         @@include('_include/_page-header.html')
 
-        <section class="promo dark-block">
+        <section id="promo" class="promo dark-block js-promo">
           <div class="container">
             <div class="promo__inner">
               <div class="promo__item">
@@ -31,12 +31,42 @@
                 </div>
               </div>
               <div class="promo__item">
-                <div class="promo__form"></div>
+                <form action="" class="promo__form form">
+                  <div class="form__caption">
+                    Заполни заявку и получи дверную ручку на свой выбор
+                  </div>
+                  <div class="form__item">
+                    <label for="form-name" class="visually-hidden"
+                      >Ваше имя</label
+                    >
+                    <input
+                      id="form-name"
+                      type="text"
+                      class="form__field"
+                      placeholder="Ваше имя"
+                    />
+                  </div>
+                  <div class="form__item">
+                    <label for="form-phone" class="visually-hidden"
+                      >Ваш номер телефона</label
+                    >
+                    <input
+                      id="form-phone"
+                      type="tel"
+                      class="form__field"
+                      placeholder="Ваш номер телефона"
+                    />
+                  </div>
+                  <div class="form__item">
+                    <button class="button" type="submit">Позвоните мне</button>
+                  </div>
+                </form>
+                F
               </div>
             </div>
           </div>
         </section>
-        <section class="door-types">
+        <section id="opportunities" class="door-types">
           <div class="container">
             <div class="door-types__header">
               <div class="title">Какие двери мы можем сделать?</div>
@@ -44,11 +74,69 @@
                 Все двери имеют непревзойденную защиту с гарантией 10 лет
               </div>
             </div>
+            <div class="door-types__inner">
+              <ul class="door-types__list">
+                <li class="door-types__item">
+                  <img
+                    class="door-types__pic"
+                    src="img/door-types/door-types-smaller.png"
+                    alt="pic"
+                  />
+                  <div class="door-types__name">Очень маленькие</div>
+                </li>
+                <li class="door-types__item door-types__item--logo">
+                  <img
+                    class="door-types__pic"
+                    src="img/door-types/vektor.png"
+                    alt="pic"
+                  />
+                  <div class="door-types__name visually-hidden">Логотип</div>
+                </li>
+                <li class="door-types__item">
+                  <img
+                    class="door-types__pic"
+                    src="img/door-types/door-types-biger.png"
+                    alt="pic"
+                  />
+                  <div class="door-types__name">Очень большие</div>
+                </li>
+                <li class="door-types__item">
+                  <img
+                    class="door-types__pic"
+                    src="img/door-types/mdf.png"
+                    alt="pic"
+                  />
+                  <div class="door-types__name">С МДФ</div>
+                </li>
+                <li class="door-types__item">
+                  <img
+                    class="door-types__pic"
+                    src="img/door-types/door-color-all.png"
+                    alt="pic"
+                  />
+                  <div class="door-types__name">Любого цвета</div>
+                </li>
+                <li class="door-types__item">
+                  <img
+                    class="door-types__pic"
+                    src="img/door-types/door-window.png"
+                    alt="pic"
+                  />
+                  <div class="door-types__name">С окном</div>
+                </li>
+                <li class="door-types__item">
+                  <img
+                    class="door-types__pic"
+                    src="img/door-types/door-form.png"
+                    alt="pic"
+                  />
+                  <div class="door-types__name">Нестандартной формы</div>
+                </li>
+              </ul>
+            </div>
           </div>
         </section>
 
-        
-        
         @@include('_include/_regulations.html')
         @@include('_include/_action.html')
         @@include('_include/_advantages.html')

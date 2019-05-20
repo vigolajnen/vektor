@@ -1,3 +1,13 @@
 .reviews {
-
+  & .title {
+    text-align: center;
+  }
+  &__inner {
+    @include rem(padding, 80px);
+    & .slider-base {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+  }
 }

@@ -1,9 +1,11 @@
 .action {
+  @include rem(padding-top, 80px);
   min-height: 500px;
-  background-image: url("../img/action/action-bg.png");
+  background-image: url('../img/action/action-bg.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  background-color: #e5e5e5;
 
   &__header {
     display: flex;
@@ -11,5 +13,53 @@
     align-items: center;
 
     @include rem(margin-bottom, 80px);
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+
+    @include rem(padding-bottom, 80px);
+  }
+  &__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+
+    &:first-child {
+      display: none;
+    }
+
+    @media (min-width: $tablet-width) {
+      width: 60%;
+
+      &:first-child {
+        display: flex;
+      }
+
+      &:last-child {
+        width: 30%;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  &__form {
+    max-height: 300px;
+    padding: 20px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid #ffffff;
+  }
+
+  &__pic {
+    margin: 0 5px;
   }
 }

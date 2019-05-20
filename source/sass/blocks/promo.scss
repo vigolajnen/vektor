@@ -1,6 +1,83 @@
 .promo {
-  background-image: url("../img/promo/promo-bg.jpg");
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-image: url('../img/promo/promo-bg.jpg');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+
+  &__title {
+    margin: 0 0 20px 0;
+
+    font-weight: bold;
+    font-size: 70px;
+    line-height: 100%;
+    /* or 70px */
+
+    color: #ffffff;
+
+    text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
+  }
+
+  &__intro {
+    padding: 10px;
+    background: rgba(0, 0, 0, 0.2);
+
+    & p {
+      font-weight: 600;
+      font-size: 25px;
+      line-height: 30px;
+
+      color: #ffffff;
+
+      text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    }
+  }
+
+  &__intro-price {
+    font-weight: 600;
+    font-size: 35px;
+    line-height: 42px;
+
+    color: #ffe176;
+
+    text-shadow: 0px 2px 20px rgba(255, 254, 239, 0.38);
+  }
+
+  &__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__item {
+    width: 100%;
+
+    @media (min-width: $tablet-width) {
+      width: 45%;
+    }
+  }
+
+  &__form {
+    max-width: 535px;
+    margin: 0 auto;
+    padding: 20px;
+
+    background: rgba(0, 0, 0, 0.2);
+    border: 1px solid #ffffff;
+
+    & .form__caption {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+
+      color: #ffffff;
+
+      text-shadow: 0px 2px 10px rgba(0, 0, 0, 0.25);
+    }
+  }
 }

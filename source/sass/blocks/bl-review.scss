@@ -1,0 +1,41 @@
+.bl-review {
+  position: relative;
+  max-width: 300px;
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 20px 20px 20px;
+    background-color: #ffffff;
+    box-shadow: 0px 1px 10px rgba(0, 112, 203, 0.1);
+    border-radius: 2px;
+  }
+  &__name {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 122.56%;
+    /* or 25px */
+
+    text-align: center;
+
+    color: #a62e06;
+  }
+  &__text {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 140%;
+    /* or 22px */
+
+    text-align: center;
+
+    color: #000000;
+  }
+  &__pic .picture {
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 50%;
+    overflow: hidden;
+  }
+}

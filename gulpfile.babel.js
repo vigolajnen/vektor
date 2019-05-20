@@ -157,6 +157,7 @@ gulp.task("html-2", function () {
 gulp.task("vendor", function () {
   gulp
     .src([
+      "source/js/libs/jquery-3.3.1.js",
       "source/js/libs/picturefill.min.js",
       "source/js/libs/svg4everybody.min.js"
     ])
@@ -167,54 +168,11 @@ gulp.task("vendor", function () {
 gulp.task("js-main", function () {
   gulp
     .src([
-      "source/js/tabs-2.js",
-      "source/js/popup.1.js",
-      "source/js/bl-controls.js"
+      "source/js/nav.js",
+      "source/js/main.js",
+      "source/js/scroll.js"
     ])
     .pipe(concat("main.min.js"))
-    .pipe(
-      uglify({
-        mangle: false
-      })
-    )
-    .pipe(gulp.dest("build/js"));
-});
-
-gulp.task("js-controls", function() {
-  gulp
-    .src([
-      "source/js/bl-controls.js"
-    ])
-    .pipe(concat("controls.min.js"))
-    .pipe(
-      uglify({
-        mangle: false
-      })
-    )
-    .pipe(gulp.dest("build/js"));
-});
-
-gulp.task("js-tabs", function() {
-  gulp
-    .src([
-      "source/js/tabs-2.js"
-    ])
-    .pipe(concat("tabs.min.js"))
-    .pipe(
-      uglify({
-        mangle: false
-      })
-    )
-    .pipe(gulp.dest("build/js"));
-});
-
-gulp.task("js-popup", function() {
-  gulp
-    .src([
-      // "source/js/popup.js",
-      "source/js/popup.1.js"
-    ])
-    .pipe(concat("popup.min.js"))
     .pipe(
       uglify({
         mangle: false
@@ -237,10 +195,7 @@ gulp.task("serve", function () {
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
   gulp.watch(
     "source/js/**/*.js",
-    ["js-main"],
-    ["js-tabs"],
-    ["js-popup"],
-    ["js-controls"]
+    ["js-main"]
   );
   gulp.watch("source/**/*.html", ["html"]).on("change", server.reload);
 });
@@ -255,9 +210,6 @@ gulp.task("build", function (done) {
     "html",
     "vendor",
     "js-main",
-    "js-tabs",
-    "js-popup",
-    "js-controls",
     done
   );
 });
