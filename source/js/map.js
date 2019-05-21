@@ -3,21 +3,24 @@
 
 function initMap() {
 
-  var areas = [{
+  var areas = [
+    {
       id: 1,
-      name: 'Тосненский',
+      name: " Санкт-Петербург, ул. Салова, д. 55 (ст. метро Бухарестская)",
       center: {
-        lat: 55.9026731,
-        lng: 37.521111
+        lat: 59.8837687,
+        lng: 30.3669243
       },
-      markers: [{
-        location: {
-          lat: 55.9026731,
-          lng: 37.521111
+      markers: [
+        {
+          location: {
+            lat: 59.8837687,
+            lng: 30.3669243
+          }
         }
-      }]
+      ]
     }
-  ]
+  ];
 
   var activeArea = areas[0];
 
@@ -152,16 +155,16 @@ function initMap() {
   listAreas.addEventListener('click', function (evt) {
     evt.preventDefault();
 
-    
+
     evt.target.classList.add('geography__item--active');
     var area = areas.find(function (c) {
       console.log(evt.target);
- 
+
       return c.id == evt.target.attributes[1].value;
     })
 
     if (area) activeArea = area;
-    
+
     map.setCenter(activeArea.center);
     // console.log(activeArea);
     markers.forEach(function (marker) {

@@ -159,7 +159,8 @@ gulp.task("vendor", function () {
     .src([
       "source/js/libs/jquery-3.3.1.js",
       "source/js/libs/picturefill.min.js",
-      "source/js/libs/svg4everybody.min.js"
+      "source/js/libs/svg4everybody.min.js",
+      "source/js/libs/swiper.min.js"
     ])
     .pipe(concat("vendor.min.js"))
     .pipe(gulp.dest("build/js"));
@@ -170,9 +171,24 @@ gulp.task("js-main", function () {
     .src([
       "source/js/nav.js",
       "source/js/main.js",
-      "source/js/scroll.js"
+      "source/js/scroll.js",
+      "source/js/slider.js "
     ])
     .pipe(concat("main.min.js"))
+    .pipe(
+      uglify({
+        mangle: false
+      })
+    )
+    .pipe(gulp.dest("build/js"));
+});
+
+gulp.task("js-map", function() {
+  gulp
+    .src([
+      "source/js/map.js"
+    ])
+    .pipe(concat("map.min.js"))
     .pipe(
       uglify({
         mangle: false
@@ -193,10 +209,7 @@ gulp.task("serve", function () {
   });
 
   gulp.watch("source/sass/**/*.{scss,sass}", ["style"]);
-  gulp.watch(
-    "source/js/**/*.js",
-    ["js-main"]
-  );
+  gulp.watch("source/js/**/*.js", ["js-main"], ["js-map"]);
   gulp.watch("source/**/*.html", ["html"]).on("change", server.reload);
 });
 
@@ -210,6 +223,7 @@ gulp.task("build", function (done) {
     "html",
     "vendor",
     "js-main",
+    "js-map",
     done
   );
 });

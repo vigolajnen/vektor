@@ -1,160 +1,127 @@
 <!DOCTYPE html>
 <html lang="ru">
-  <head>
-    <meta charset="utf-8" />
-    <title>Vektor</title>
-    @@include('_include/_head-meta.html')
-    <link rel="preload" href="fonts/Exo2.0-Regular.woff2" as="font" />
-    <link rel="stylesheet" href="css/style.min.css" />
-  </head>
 
-  <body>
-    <div class="wrapper">
-      <div class="content page">
-        <!-- контент -->
+<head>
+  <meta charset="utf-8" />
+  <title>Vektor</title>
+  @@include('_include/_head-meta.html')
+  <link rel="preload" href="fonts/Exo2.0-Regular.woff2" as="font" />
+  <link rel="stylesheet" href="css/style.min.css" />
+</head>
 
-        @@include('_include/_page-header.html')
+<body>
+  <div class="wrapper">
+    <div class="content page">
+      <!-- контент -->
 
-        <section id="promo" class="promo dark-block js-promo">
-          <div class="container">
-            <div class="promo__inner">
-              <div class="promo__item">
-                <h1 class="promo__title">
-                  Нестандартные металлические двери на заказ
-                </h1>
-                <div class="promo__intro">
-                  <p>
-                    Изготовим и установим надёжную металлическую дверь любой
-                    конфигурации и размера от
-                    <span class="promo__intro-price">7 500</span> руб.
-                  </p>
+      @@include('_include/_page-header.html')
+
+      <section id="promo" class="promo dark-block js-promo">
+        <div class="container">
+          <div class="promo__inner">
+            <div class="promo__item">
+              <h1 class="promo__title">
+                Нестандартные металлические двери на заказ
+              </h1>
+              <div class="promo__intro">
+                <p>
+                  Изготовим и установим надёжную металлическую дверь любой
+                  конфигурации и размера от
+                  <span class="promo__intro-price">7 500</span> руб.
+                </p>
+              </div>
+            </div>
+            <div class="promo__item">
+              <form action="" class="promo__form form">
+                <div class="form__caption">
+                  Заполни заявку и получи дверную ручку на свой выбор
                 </div>
-              </div>
-              <div class="promo__item">
-                <form action="" class="promo__form form">
-                  <div class="form__caption">
-                    Заполни заявку и получи дверную ручку на свой выбор
-                  </div>
-                  <div class="form__item">
-                    <label for="form-name" class="visually-hidden"
-                      >Ваше имя</label
-                    >
-                    <input
-                      id="form-name"
-                      type="text"
-                      class="form__field"
-                      placeholder="Ваше имя"
-                    />
-                  </div>
-                  <div class="form__item">
-                    <label for="form-phone" class="visually-hidden"
-                      >Ваш номер телефона</label
-                    >
-                    <input
-                      id="form-phone"
-                      type="tel"
-                      class="form__field"
-                      placeholder="Ваш номер телефона"
-                    />
-                  </div>
-                  <div class="form__item">
-                    <button class="button" type="submit">Позвоните мне</button>
-                  </div>
-                </form>
-                F
-              </div>
+                <div class="form__item">
+                  <label for="form-name" class="visually-hidden">Ваше имя</label>
+                  <input id="form-name" type="text" class="form__field" placeholder="Ваше имя" />
+                </div>
+                <div class="form__item">
+                  <label for="form-phone" class="visually-hidden">Ваш номер телефона</label>
+                  <input id="form-phone" type="tel" class="form__field" placeholder="Ваш номер телефона" />
+                </div>
+                <div class="form__item">
+                  <button class="button" type="submit">Позвоните мне</button>
+                </div>
+              </form>
+              F
             </div>
-          </div>
-        </section>
-        <section id="opportunities" class="door-types">
-          <div class="container">
-            <div class="door-types__header">
-              <div class="title">Какие двери мы можем сделать?</div>
-              <div class="warning">
-                Все двери имеют непревзойденную защиту с гарантией 10 лет
-              </div>
-            </div>
-            <div class="door-types__inner">
-              <ul class="door-types__list">
-                <li class="door-types__item">
-                  <img
-                    class="door-types__pic"
-                    src="img/door-types/door-types-smaller.png"
-                    alt="pic"
-                  />
-                  <div class="door-types__name">Очень маленькие</div>
-                </li>
-                <li class="door-types__item door-types__item--logo">
-                  <img
-                    class="door-types__pic"
-                    src="img/door-types/vektor.png"
-                    alt="pic"
-                  />
-                  <div class="door-types__name visually-hidden">Логотип</div>
-                </li>
-                <li class="door-types__item">
-                  <img
-                    class="door-types__pic"
-                    src="img/door-types/door-types-biger.png"
-                    alt="pic"
-                  />
-                  <div class="door-types__name">Очень большие</div>
-                </li>
-                <li class="door-types__item">
-                  <img
-                    class="door-types__pic"
-                    src="img/door-types/mdf.png"
-                    alt="pic"
-                  />
-                  <div class="door-types__name">С МДФ</div>
-                </li>
-                <li class="door-types__item">
-                  <img
-                    class="door-types__pic"
-                    src="img/door-types/door-color-all.png"
-                    alt="pic"
-                  />
-                  <div class="door-types__name">Любого цвета</div>
-                </li>
-                <li class="door-types__item">
-                  <img
-                    class="door-types__pic"
-                    src="img/door-types/door-window.png"
-                    alt="pic"
-                  />
-                  <div class="door-types__name">С окном</div>
-                </li>
-                <li class="door-types__item">
-                  <img
-                    class="door-types__pic"
-                    src="img/door-types/door-form.png"
-                    alt="pic"
-                  />
-                  <div class="door-types__name">Нестандартной формы</div>
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
-
-        @@include('_include/_regulations.html')
-        @@include('_include/_action.html')
-        @@include('_include/_advantages.html')
-
-        <div class="bl">
-          <div class="container">
-            @@include('_include/_reviews.html')
-            @@include('_include/_gallery.html')
           </div>
         </div>
-        @@include('_include/_contacts.html')
+      </section>
+      <section id="opportunities" class="door-types">
+        <div class="container">
+          <div class="door-types__header">
+            <div class="title">Какие двери мы можем сделать?</div>
+            <div class="warning">
+              Все двери имеют непревзойденную защиту с гарантией 10 лет
+            </div>
+          </div>
+          <div class="door-types__inner">
+            <ul class="door-types__list">
+              <li class="door-types__item">
+                <img class="door-types__pic" src="img/door-types/door-types-smaller.png" alt="pic" />
+                <div class="door-types__name">Очень маленькие</div>
+              </li>
+              <li class="door-types__item door-types__item--logo">
+                <img class="door-types__pic" src="img/door-types/vektor.png" alt="pic" />
+                <div class="door-types__name visually-hidden">Логотип</div>
+              </li>
+              <li class="door-types__item">
+                <img class="door-types__pic" src="img/door-types/door-types-biger.png" alt="pic" />
+                <div class="door-types__name">Очень большие</div>
+              </li>
+              <li class="door-types__item">
+                <img class="door-types__pic" src="img/door-types/mdf.png" alt="pic" />
+                <div class="door-types__name">С МДФ</div>
+              </li>
+              <li class="door-types__item">
+                <img class="door-types__pic" src="img/door-types/door-color-all.png" alt="pic" />
+                <div class="door-types__name">Любого цвета</div>
+              </li>
+              <li class="door-types__item">
+                <img class="door-types__pic" src="img/door-types/door-window.png" alt="pic" />
+                <div class="door-types__name">С окном</div>
+              </li>
+              <li class="door-types__item">
+                <img class="door-types__pic" src="img/door-types/door-form.png" alt="pic" />
+                <div class="door-types__name">Нестандартной формы</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
 
-        <!-- контент -->
+      @@include('_include/_regulations.html')
+      @@include('_include/_action.html')
+      @@include('_include/_advantages.html')
+
+      <div class="bl">
+        <div class="container">
+          @@include('_include/_reviews.html')
+          @@include('_include/_gallery.html')
+        </div>
       </div>
+      @@include('_include/_contacts.html')
 
-      @@include('_include/_page-footer.html')
+      <!-- контент -->
     </div>
 
-    @@include('_include/_script.html')
-  </body>
+    @@include('_include/_page-footer.html')
+  </div>
+
+  @@include('_include/_script.html')
+
+  <script src="https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js">
+  </script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyA5yUe9FAKioTSGs8OXzRMBPUMtzWNjHx4&callback=initMap"
+    async defer></script>
+
+  <script src="js/map.min.js"></script>
+</body>
+
 </html>

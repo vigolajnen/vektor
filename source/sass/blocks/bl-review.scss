@@ -1,10 +1,14 @@
 .bl-review {
   position: relative;
   max-width: 300px;
+  padding-top: 50px;
   &__inner {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    min-height: 350px;
     padding: 50px 20px 20px 20px;
     background-color: #ffffff;
     box-shadow: 0px 1px 10px rgba(0, 112, 203, 0.1);
@@ -32,7 +36,7 @@
   }
   &__pic .picture {
     position: absolute;
-    top: -50px;
+    top: 0;
     left: 50%;
     transform: translateX(-50%);
     border-radius: 50%;

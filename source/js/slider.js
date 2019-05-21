@@ -2,142 +2,69 @@
 
 // слайдеры на главной
 $(document).ready(function() {
-  if (window.outerWidth < 992) {
-    $("#slider-main-goods").slick({
-      dots: true,
-      arrow: false,
-      centerPadding: "40px",
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 769,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
+  $(".swiper-object .swiper-container").each(function(index, value) {
+    var mySwiper = new Swiper(value, {
+      navigation: {
+        nextEl: value.nextElementSibling.nextElementSibling,
+        prevEl: value.nextElementSibling
+      },
+      pagination: {
+        el: value.nextElementSibling.nextElementSibling.nextElementSibling,
+        clickable: true
+      },
+      slidesPerView: 4,
+      loop: true,
+      slidesPerColumn: 1,
+      breakpoints: {
+        // when window width is <= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10
         },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
-
-    $("#js-slider-project-2").slick({
-      dots: true,
-      arrow: false,
-      centerPadding: "40px",
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 1025,
-          settings: {
-            slidesToShow: 4,
-            slidesToScroll: 1
-          }
+        // when window width is <= 480px
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 20
         },
-        {
-          breakpoint: 769,
-          settings: {
-            slidesToShow: 3,
-            slidesToScroll: 1
-          }
+        // when window width is <= 640px
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 30
+        }
+      }
+    });
+  });
+
+  $(".slider-reviews .swiper-container").each(function(index, value) {
+    var swiper = new Swiper(value, {
+      navigation: {
+        nextEl: value.nextElementSibling.nextElementSibling,
+        prevEl: value.nextElementSibling
+      },
+      pagination: {
+        el: value.nextElementSibling.nextElementSibling.nextElementSibling,
+        clickable: true
+      },
+      slidesPerView: 3,
+      loop: true,
+      slidesPerColumn: 1,
+      breakpoints: {
+        // when window width is <= 320px
+        320: {
+          slidesPerView: 1,
+          spaceBetween: 10
         },
-        {
-          breakpoint: 600,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
+        // when window width is <= 480px
+        480: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        // when window width is <= 640px
+        640: {
+          slidesPerView: 3,
+          spaceBetween: 30
         }
-      ]
+      }
     });
-
-    $("#js-slider-project").slick({
-      dots: true,
-      arrow: false,
-      centerPadding: "40px",
-      infinite: true,
-      slidesToShow: 3,
-      slidesToScroll: 1,
-      responsive: [
-        {
-          breakpoint: 800,
-          settings: {
-            slidesToShow: 2,
-            slidesToScroll: 1
-          }
-        }
-      ]
-    });
-  }
-
-  window.addEventListener("resize", function() {
-    if (window.outerWidth < 992) {
-      $("#slider-main-goods").slick({
-        dots: true,
-        arrow: false,
-        centerPadding: "40px",
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-
-      $("#js-slider-project").slick({
-        dots: true,
-        arrow: false,
-        centerPadding: "40px",
-        infinite: true,
-        slidesToShow: 2,
-        slidesToScroll: 1,
-        responsive: [
-          {
-            breakpoint: 600,
-            settings: {
-              slidesToShow: 2,
-              slidesToScroll: 1
-            }
-          }
-        ]
-      });
-    }
   });
 });
-
-
-
-
- $(".slider__for").slick({
-   slidesToShow: 1,
-   slidesToScroll: 1,
-   arrows: false,
-   fade: true,
-   dots: true,
-   asNavFor: ".slider__nav"
- });
- $(".slider__nav").slick({
-   slidesToShow: 3,
-   slidesToScroll: 1,
-   asNavFor: ".slider__for",
-   dots: false,
-   arrow: true,
-   centerMode: true,
-   centerPadding: "40px",
-   focusOnSelect: true
- });
