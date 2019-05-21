@@ -1,11 +1,19 @@
 .action {
   @include rem(padding-top, 80px);
   min-height: 500px;
-  background-image: url('../img/action/action-bg.png');
+  background-image: url('../img/action/action-bg-xs.png');
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-color: #e5e5e5;
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/action/action-bg-md.png");
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/action/action-bg.png");
+  }
 
   &__header {
     display: flex;

@@ -1,9 +1,34 @@
 .advantages {
+  position: relative;
+  min-height: 500px;
   @include rem(padding, 100px 0);
-  background-image: url('../img/advantages/advantages-bg.jpg');
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
+  background-image: url("../img/advantages/advantages-bg-xs.jpg");
+
+  @media (min-width: $tablet-width) {
+    background-image: url("../img/advantages/advantages-bg-md.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media (min-width: $desktop-width) {
+    background-image: url("../img/advantages/advantages-bg.jpg");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.75) 0%,
+      rgba(0, 0, 0, 0.6375) 100%
+    );
+    z-index: 0;
+  }
 
   &__header {
     display: flex;
@@ -53,11 +78,11 @@
   &__text {
     font-weight: 600;
     @include ff(
-      'font-size',
+      "font-size",
       (
         768px: 16px,
         1280px: 18px,
-        1800px: 20px,
+        1800px: 20px
       )
     );
     line-height: 24px;

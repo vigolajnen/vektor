@@ -52,7 +52,8 @@ img {
 
 .content {
   flex: 1 0 auto;
-  margin-bottom: 70px;
+  // margin-bottom: 70px;
+  overflow: hidden;
 
   @media (min-width: 600px) {
     margin-bottom: 100px;
@@ -149,20 +150,45 @@ img {
   }
 }
 
-.slick-initialized .slick-slide {
-  display: flex;
-}
-
-.slick-track {
-  display: flex;
-}
-
-.slick-list {
-  display: flex;
-  // overflow: visible;
-}
-
 .swiper-object {
   position: relative;
   padding: 0 40px;
+
+  & .swiper-pagination {
+    display: block;
+    left: 50%;
+    transform: translateX(-50%);
+    @media (min-width: $tablet-width) {
+      display: none;
+    }
+  }
+  & .swiper-button-prev,
+  & .swiper-button-next {
+    display: none;
+    background-image: none;
+    @media (min-width: $tablet-width) {
+      display: block;
+    }
+  }
+
+  & .swiper-button-prev svg {
+    fill: #a06060;
+    transform: rotate(90deg);
+  }
+  & .swiper-button-next svg {
+    fill: #a06060;
+    transform: rotate(-90deg);
+  }
+
+  & .swiper-pagination-bullet {
+    margin: 5px;
+  }
+
+  & .swiper-pagination-bullet-active {
+    background: #a06060;
+  }
+}
+
+.hidden {
+  display: none;
 }

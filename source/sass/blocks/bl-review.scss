@@ -1,7 +1,11 @@
 .bl-review {
   position: relative;
-  max-width: 300px;
+
   padding-top: 50px;
+
+  @media (min-width: $desktop-width) {
+    max-width: 300px;
+  }
   &__inner {
     display: flex;
     flex-direction: column;
@@ -15,6 +19,7 @@
     border-radius: 2px;
   }
   &__name {
+    max-width: 130px;
     font-weight: bold;
     font-size: 20px;
     line-height: 122.56%;

@@ -4,13 +4,24 @@
   @include ff(
     "font-size",
     (
-      768px: 20px,
+      768px: 16px,
       1280px: 25px,
       1800px: 30px
     )
   );
   line-height: 120%;
+  text-align: center;
   text-transform: uppercase;
 
   color: #cf0303;
+
+  @media (min-width: $tablet-width) {
+    text-align: left;
+  }
+
+  &--sm {
+    max-width: 700px;
+    margin: 0 auto;
+    text-align: center;
+  }
 }
