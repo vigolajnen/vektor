@@ -6,6 +6,7 @@
   background-image: url("../img/bl/bl-bg-xs.png");
   background-repeat: repeat;
   background-size: 105%;
+  background-attachment: fixed;
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/bl/bl-bg-md.png");

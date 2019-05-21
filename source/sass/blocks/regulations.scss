@@ -4,6 +4,7 @@
 
   @include rem(padding, 40px 0);
   background-image: url("../img/regulations/regulations-bg-xs.jpg");
+  background-attachment: fixed;
 
   @media (min-width: $tablet-width) {
     @include rem(padding, 100px 0);

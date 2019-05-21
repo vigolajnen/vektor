@@ -8,6 +8,7 @@
   background-size: cover;
   background-position: center;
   background-color: #e5e5e5;
+  background-attachment: fixed;
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/door-types/door-types-bg-2-md.png");

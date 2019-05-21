@@ -3,6 +3,7 @@
   min-height: 500px;
   @include rem(padding, 100px 0);
   background-image: url("../img/advantages/advantages-bg-xs.jpg");
+  background-attachment: fixed;
 
   @media (min-width: $tablet-width) {
     background-image: url("../img/advantages/advantages-bg-md.jpg");
