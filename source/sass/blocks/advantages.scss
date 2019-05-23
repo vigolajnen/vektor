@@ -1,23 +1,14 @@
+// advantages
+
 .advantages {
   position: relative;
   min-height: 500px;
   @include rem(padding, 100px 0);
-  background-image: url("../img/advantages/advantages-bg-xs.jpg");
+  background-image: url('../img/advantages/advantages-bg-xs.jpg');
   background-attachment: fixed;
 
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/advantages/advantages-bg-md.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/advantages/advantages-bg.jpg");
-  }
-
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -65,12 +56,6 @@
 
       color: rgba(255, 211, 179, 0.4);
     }
-    @media (min-width: $mobile-width-xl) {
-      width: 45%;
-    }
-    @media (min-width: $tablet-width) {
-      width: 30%;
-    }
   }
   &__inner {
     @include rem(padding, 40px 20px 70px 40px);
@@ -79,11 +64,11 @@
   &__text {
     font-weight: 600;
     @include ff(
-      "font-size",
+      'font-size',
       (
         768px: 16px,
         1280px: 18px,
-        1800px: 20px
+        1800px: 20px,
       )
     );
     line-height: 24px;
@@ -93,3 +78,30 @@
     text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.7);
   }
 }
+
+@media (min-width: $mobile-width-xl) {
+  .advantages__item {
+    width: 45%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages {
+    background-image: url('../img/advantages/advantages-bg-md.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__item {
+      width: 30%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .advantages {
+    background-image: url('../img/advantages/advantages-bg.jpg');
+  }
+}
+
+// advantages end

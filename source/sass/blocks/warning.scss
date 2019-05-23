@@ -1,12 +1,11 @@
 .warning {
   font-weight: bold;
-  font-size: 30px;
   @include ff(
-    "font-size",
+    'font-size',
     (
       768px: 16px,
       1280px: 25px,
-      1800px: 30px
+      1800px: 30px,
     )
   );
   line-height: 120%;
@@ -15,13 +14,15 @@
 
   color: #cf0303;
 
-  @media (min-width: $tablet-width) {
-    text-align: left;
-  }
-
   &--sm {
     max-width: 700px;
     margin: 0 auto;
     text-align: center;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .warning {
+    text-align-last: left;
   }
 }

@@ -5,7 +5,6 @@
     text-align: center;
   }
   &__inner {
-
     @include rem(margin, 80px 0);
     & .slider-base {
       display: flex;
@@ -18,19 +17,12 @@
     display: block;
     left: 50%;
     transform: translateX(-50%);
-    @media (min-width: $tablet-width) {
-      display: none;
-    }
   }
 
   & .swiper-button-prev,
   & .swiper-button-next {
     display: none;
     background-image: none;
-    @media (min-width: $tablet-width) {
-      display: block;
-      top: 35%;
-    }
   }
 
   & .swiper-button-prev {
@@ -45,7 +37,6 @@
   }
   & .swiper-button__icon {
     fill: #a62e06;
-
   }
 
   & .swiper-button-next .swiper-button__icon {
@@ -53,5 +44,19 @@
   }
   & .swiper-pagination-bullet-active {
     background: #a06060;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .reviews {
+    & .swiper-pagination {
+      display: none;
+    }
+
+    & .swiper-button-prev,
+    & .swiper-button-next {
+      display: block;
+      top: 35%;
+    }
   }
 }

@@ -1,4 +1,6 @@
-var oldScrollY = 0;
+// header-fixed
+(function () {
+  var oldScrollY = 0;
 var div = document.getElementById("header-fixed");
 var addressTop = document.querySelector(".page-header__contacts");
 
@@ -28,7 +30,6 @@ $(window).ready(function () {
 });
 
 
-
 var $page = $("html, body");
 $('a[href*="#"]').click(function() {
   $page.animate(
@@ -39,3 +40,7 @@ $('a[href*="#"]').click(function() {
   );
   return false;
 });
+
+})();
+
+// header-fixed end

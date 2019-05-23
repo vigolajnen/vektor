@@ -4,8 +4,6 @@
   color: #ffffff;
 
   &__inner {
-
-
     display: flex;
     flex-direction: column;
   }
@@ -28,10 +26,10 @@
     width: 100%;
 
     @include ff(
-      "font-size",
+      'font-size',
       (
         768px: 14px,
-        1900px: 16px
+        1900px: 16px,
       )
     );
     line-height: 19px;
@@ -55,11 +53,11 @@
     width: 100%;
 
     @include ff(
-      "font-size",
+      'font-size',
       (
         768px: 14px,
         1280px: 17px,
-        1900px: 19px
+        1900px: 19px,
       )
     );
     line-height: 100%;
@@ -108,14 +106,13 @@
     width: 100%;
 
     @include ff(
-      "font-size",
+      'font-size',
       (
         768px: 14px,
-        1900px: 16px
+        1900px: 16px,
       )
     );
     line-height: 19px;
-
 
     @media (min-width: $tablet-width) {
       width: 75%;
@@ -135,10 +132,10 @@
     width: 100%;
 
     @include ff(
-      "font-size",
+      'font-size',
       (
         768px: 14px,
-        1900px: 16px
+        1900px: 16px,
       )
     );
     line-height: 19px;

@@ -1,10 +1,10 @@
+// navigation
 
 (function () {
 
   var navMain = document.querySelector(".navigation");
   var navMainList = document.querySelector(".navigation__list");
   var navToggle = document.querySelector(".navigation__toggle");
-  // var logo = document.querySelector(".js-logo");
 
   navMain.classList.remove("navigation--nojs");
 
@@ -28,3 +28,5 @@
     document.querySelector('body').style.overflow = 'visible';
   })
 })();
+
+// navigation end

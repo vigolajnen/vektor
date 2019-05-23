@@ -1,66 +1,42 @@
 @import "libs/normalize.scss";
-
-// @import "libs/magnific-popup.scss";
-// @import "libs/jquery.jscrollpane.scss";
-// @import "libs/animate.scss";
-// @import "libs/slick-theme.scss";
-// @import "libs/slick.scss";
-
-// @import "libs/fancybox.scss";
-// @import "libs/rangeslider.scss";
-// @import "libs/jquery.scrollbar.scss";
-// @import "libs/fileinput.scss";
-
-// @import "libs/jquery-ui.scss";
-
-
 @import "libs/swiper.min.scss";
 
 @import "variables.scss";
-@import "base.scss";
-@import "utils.scss";
 @import "mixins.scss";
+@import "utils.scss";
+@import "base.scss";
 
-// @import "sprite-png.scss";
+
 @import "blocks/sprite.scss";
+@import "blocks/fixed.scss";
 
 @import "blocks/page-header.scss";
+@import "blocks/navigation.scss";
 @import "blocks/page-footer.scss";
 
 @import "blocks/button.scss";
 @import "blocks/link.scss";
 @import "blocks/title.scss";
-@import "blocks/page.scss";
-
-
 @import "blocks/container.scss";
 @import "blocks/warning.scss";
-@import "blocks/contacts.scss";
-@import "blocks/bl.scss";
-@import "blocks/gallery.scss";
-@import "blocks/reviews.scss";
+@import "blocks/form.scss";
+
+
 @import "blocks/promo.scss";
 @import "blocks/door-types.scss";
 @import "blocks/regulations.scss";
 @import "blocks/action.scss";
 @import "blocks/advantages.scss";
-@import "blocks/dark-block.scss ";
-
-
-
-
-@import "blocks/tabs.scss";
-@import "blocks/subtabs.scss";
-@import "blocks/popup.scss";
-@import "blocks/navigation.scss";
-
-
-// @import "blocks/hidden.scss";
-@import "blocks/form.scss";
-
-@import "blocks/fixed.scss";
-@import "blocks/anim.scss";
-@import "blocks/map.scss";
+@import "blocks/bl.scss";
+@import "blocks/gallery.scss";
+@import "blocks/reviews.scss";
 @import "blocks/bl-review.scss";
+@import "blocks/contacts.scss";
+@import "blocks/map.scss";
 
-// @import "blocks/preloader.scss";
+
+
+
+
+
+

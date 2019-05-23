@@ -1,5 +1,5 @@
 .title {
-  margin: 0 0 20px 0;
+  @include rem(margin, 0 0 20px 0);
   font-weight: 500;
   line-height: 100%;
   @include ff(

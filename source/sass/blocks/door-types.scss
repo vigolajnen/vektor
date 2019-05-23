@@ -1,26 +1,18 @@
+// door-types
+
 .door-types {
   position: relative;
   @include rem(padding-top, 80px);
 
   min-height: 500px;
-  background-image: url("../img/door-types/door-types-bg-2-xs.png");
+  background-image: url('../img/door-types/door-types-bg-2-xs.png');
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
   background-color: #e5e5e5;
-  background-attachment: fixed;
-
-  @media (min-width: $tablet-width) {
-    background-image: url("../img/door-types/door-types-bg-2-md.png");
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/door-types/door-types-bg-2.png");
-    background-position-y: 0;
-  }
 
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     border-top: 75px solid transparent;
@@ -31,7 +23,7 @@
   }
 
   &::after {
-    content: "";
+    content: '';
     position: absolute;
     display: block;
     border-top: 75px solid transparent;
@@ -48,10 +40,6 @@
     text-align: center;
 
     @include rem(margin-bottom, 80px);
-
-    @media (min-width: $tablet-width) {
-
-    }
   }
 
   &__inner {
@@ -80,17 +68,9 @@
     width: 45%;
     transition: 1s;
 
-    @media (min-width: $tablet-width) {
-      order: 0;
-      width: 25%;
-    }
-
     &--logo {
       order: 0;
       width: 100%;
-      @media (min-width: $tablet-width) {
-        width: 50%;
-      }
     }
   }
 
@@ -105,3 +85,25 @@
     color: #000000;
   }
 }
+
+@media (min-width: $tablet-width) {
+  .door-types {
+    background-image: url('../img/door-types/door-types-bg-2-md.png');
+  }
+  .door-types__item {
+    order: 0;
+    width: 25%;
+    &--logo {
+      width: 50%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .door-types {
+    background-image: url('../img/door-types/door-types-bg-2.png');
+    background-position-y: 0;
+  }
+}
+
+// door-types end

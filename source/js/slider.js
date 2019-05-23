@@ -16,17 +16,17 @@ $(document).ready(function() {
       loop: true,
       slidesPerColumn: 1,
       breakpoints: {
-        // when window width is <= 320px
+        // when window width is <= 425px
         425: {
           slidesPerView: 1,
           spaceBetween: 10
         },
-        // when window width is <= 480px
+        // when window width is <= 640px
         640: {
           slidesPerView: 2,
           spaceBetween: 20
         },
-        // when window width is <= 640px
+        // when window width is <= 990px
         990: {
           slidesPerView: 3,
           spaceBetween: 30
@@ -49,17 +49,17 @@ $(document).ready(function() {
       loop: true,
       slidesPerColumn: 1,
       breakpoints: {
-        // when window width is <= 320px
+        // when window width is <= 425x
         425: {
           slidesPerView: 1,
           spaceBetween: 10
         },
-        // when window width is <= 480px
+        // when window width is <= 780px
         780: {
           slidesPerView: 2,
           spaceBetween: 20
         },
-        // when window width is <= 640px
+        // when window width is <= 990px
         990: {
           slidesPerView: 3,
           spaceBetween: 30

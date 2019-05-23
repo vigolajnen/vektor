@@ -1,25 +1,15 @@
+//  regulations
+
 .regulations {
   position: relative;
   min-height: 500px;
 
   @include rem(padding, 40px 0);
-  background-image: url("../img/regulations/regulations-bg-xs.jpg");
+  background-image: url('../img/regulations/regulations-bg-xs.jpg');
   background-attachment: fixed;
 
-  @media (min-width: $tablet-width) {
-    @include rem(padding, 100px 0);
-    background-image: url("../img/regulations/regulations-bg-md.jpg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-
-  @media (min-width: $desktop-width) {
-    background-image: url("../img/regulations/regulations-bg.jpg");
-  }
-
   &::before {
-    content: "";
+    content: '';
     position: absolute;
     top: 0;
     left: 0;
@@ -36,19 +26,15 @@
   &__title {
     text-align: center;
     @include rem(margin-bottom, 40px);
-
-    @media (min-width: $tablet-width) {
-      @include rem(margin-bottom, 115px);
-    }
   }
   &__list-title {
     font-weight: 800;
     @include ff(
-      "font-size",
+      'font-size',
       (
         768px: 25px,
         1280px: 30px,
-        1800px: 35px
+        1800px: 35px,
       )
     );
     line-height: 120%;
@@ -59,11 +45,11 @@
   }
   &__list-count {
     @include ff(
-      "font-size",
+      'font-size',
       (
         768px: 35px,
         1280px: 40px,
-        1800px: 50px
+        1800px: 50px,
       )
     );
     color: #ff3d00;
@@ -95,12 +81,6 @@
 
       color: rgba(255, 211, 179, 0.4);
     }
-    @media (min-width: $mobile-width-xl) {
-      width: 45%;
-    }
-    @media (min-width: $tablet-width) {
-      width: 30%;
-    }
   }
   &__inner {
     @include rem(padding, 40px 20px 70px 40px);
@@ -109,11 +89,11 @@
   &__text {
     font-weight: 600;
     @include ff(
-      "font-size",
+      'font-size',
       (
         768px: 16px,
         1280px: 18px,
-        1800px: 20px
+        1800px: 20px,
       )
     );
     line-height: 24px;
@@ -123,3 +103,35 @@
     text-shadow: 0px 2px 15px rgba(0, 0, 0, 0.7);
   }
 }
+
+@media (min-width: $mobile-width-xl) {
+  .regulations__item {
+    width: 45%;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .regulations {
+    @include rem(padding, 100px 0);
+    background-image: url('../img/regulations/regulations-bg-md.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    &__title {
+      @include rem(margin-bottom, 115px);
+    }
+
+    &__item {
+      width: 30%;
+    }
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .regulations {
+    background-image: url('../img/regulations/regulations-bg.jpg');
+  }
+}
+
+// regulations end

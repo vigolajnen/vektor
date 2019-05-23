@@ -66,13 +66,13 @@
 
   &__field {
     width: 100%;
-    background: #FEFEFE;
+    background: #fefefe;
 
     @include rem(
       (
         padding: 10px 20px,
-        border: 1px solid #F3D328,
-        border-radius: 0
+        border: 1px solid #f3d328,
+        border-radius: 0,
       )
     );
 
@@ -84,7 +84,7 @@
 
     &:hover,
     &:focus {
-      border: 1px solid #F3D328;
+      border: 1px solid #f3d328;
     }
 
     &:focus::placeholder {
@@ -100,7 +100,7 @@
       (
         padding: 15px,
         line-height: 25px,
-        font-size: 16px
+        font-size: 16px,
       )
     );
 
@@ -128,7 +128,7 @@
       (
         padding: 10px 20px,
         border: 1px solid #eaebee,
-        border-radius: 25px
+        border-radius: 25px,
       )
     );
 
@@ -136,31 +136,22 @@
 
     &::after {
       position: absolute;
-      content: "";
+      content: '';
       top: 50%;
       @include rem(right, 20px);
       transform: rotate(180deg) translateY(50%);
-
-      // @include sprite($icon-arrow-close);
     }
   }
 
   &__bottom {
     text-align: center;
-
-    @media (min-width: $tablet-width) {
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-start;
-      align-items: center;
-    }
   }
 
   &__policy {
     @include rem(
       (
         margin-bottom: 20px,
-        font-size: 14px
+        font-size: 14px,
       )
     );
 
@@ -175,5 +166,14 @@
     @include respond-above(sm) {
       width: 48%;
     }
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .form__bottom {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
   }
 }
