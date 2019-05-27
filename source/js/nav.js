@@ -27,6 +27,28 @@
     navMain.classList.remove("navigation--opened");
     document.querySelector('body').style.overflow = 'visible';
   })
+
+  document.querySelectorAll(".navigation__list li a").forEach(function(item){
+    item.addEventListener('click', function() {
+      navMain.classList.add("navigation--closed");
+      navMain.classList.remove("navigation--opened");
+      document.querySelector("body").style.overflow = "visible";
+    })
+  });
 })();
 
 // navigation end
+
+
+(function() {
+  var links = document.querySelectorAll(".bl-review__link");
+
+  links.forEach(function(link) {
+    link.addEventListener('click', function(evt){
+      evt.preventDefault();
+
+      link.previousElementSibling.classList.toggle('active');
+      link.classList.toggle('close');
+    })
+  });
+})();

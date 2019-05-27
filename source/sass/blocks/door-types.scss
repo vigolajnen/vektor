@@ -5,14 +5,15 @@
   @include rem(padding-top, 80px);
 
   min-height: 500px;
-  background-image: url('../img/door-types/door-types-bg-2-xs.png');
+  text-align: center;
+  background-image: url("../img/door-types/door-types-bg-2-xs.png");
   background-repeat: repeat;
   background-size: cover;
   background-position: center;
   background-color: #e5e5e5;
 
   &::before {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     border-top: 75px solid transparent;
@@ -23,7 +24,7 @@
   }
 
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     display: block;
     border-top: 75px solid transparent;
@@ -52,7 +53,7 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
   }
 
   &__item {
@@ -61,8 +62,7 @@
     flex-direction: column;
     align-items: center;
 
-    min-height: 280px;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom: 20px;
 
     width: 45%;
@@ -71,28 +71,42 @@
     &--logo {
       order: 0;
       width: 100%;
+
+      & .door-types__pic {
+        max-width: 60%;
+      }
     }
   }
 
   &__pic {
     @include rem(margin-bottom, 20px);
+
+    @media (min-width: $tablet-width) {
+      max-width: 80%;
+    }
   }
 
   &__name {
+    @include rem(min-height, 45px);
     font-weight: 500;
     font-size: 20px;
     line-height: 100%;
     color: #000000;
+
+    @media (min-width: $tablet-width) {
+      @include rem(min-height, 1px);
+    }
   }
 }
 
 @media (min-width: $tablet-width) {
   .door-types {
-    background-image: url('../img/door-types/door-types-bg-2-md.png');
+    background-image: url("../img/door-types/door-types-bg-2-md.png");
   }
   .door-types__item {
     order: 0;
     width: 25%;
+    @include rem(min-height, 280px);
     &--logo {
       width: 50%;
     }
@@ -101,7 +115,7 @@
 
 @media (min-width: $desktop-width) {
   .door-types {
-    background-image: url('../img/door-types/door-types-bg-2.png');
+    background-image: url("../img/door-types/door-types-bg-2.png");
     background-position-y: 0;
   }
 }

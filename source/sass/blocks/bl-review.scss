@@ -30,6 +30,8 @@
     color: #a62e06;
   }
   &__text {
+    max-height: 200px;
+    overflow: hidden;
     font-weight: normal;
     font-size: 16px;
     line-height: 140%;
@@ -38,6 +40,12 @@
     text-align: center;
 
     color: #000000;
+
+    transition: 1s;
+
+    &.active {
+      animation: heightReview 2s forwards;
+    }
   }
   &__pic .picture {
     position: absolute;
@@ -47,10 +55,29 @@
     border-radius: 50%;
     overflow: hidden;
   }
+  &__link {
+    &.close {
+      transform: rotate(180deg);
+    }
+  }
 }
 
 @media (min-width: $desktop-width) {
   .bl-review {
     max-width: 300px;
+  }
+}
+
+
+
+@keyframes heightReview {
+  0% {
+    opacity: 0;
+    max-height: 200px;
+  }
+
+  100% {
+    opacity: 1;
+    max-height: 100%;
   }
 }

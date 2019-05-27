@@ -16,7 +16,7 @@ $(window).ready(function () {
       div.className = "fixed fixed-top";
     }
 
-    if ($(window).scrollTop() > 600) {
+    if ($(window).scrollTop() > 300) {
       div.classList.add('header-mobile--dark');
       div.classList.remove('fixed-bottom');
       addressTop.classList.add("hidden");
