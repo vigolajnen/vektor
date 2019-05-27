@@ -160,6 +160,7 @@ gulp.task("vendor", function () {
       "source/js/libs/jquery-3.3.1.js",
       "source/js/libs/picturefill.min.js",
       "source/js/libs/svg4everybody.min.js",
+      "source/js/libs/scrollreveal.min.js",
       "source/js/libs/swiper.min.js"
     ])
     .pipe(concat("vendor.min.js"))

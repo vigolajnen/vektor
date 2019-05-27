@@ -41,6 +41,15 @@ $('a[href*="#"]').click(function() {
   return false;
 });
 
+
+ScrollReveal().reveal(".door-types__item", { delay: 500 });
+ScrollReveal().reveal(".regulations__item", { delay: 500 });
+ScrollReveal().reveal(".advantages__item", { delay: 500 });
+ScrollReveal().reveal(".reviews", { delay: 500 });
+ScrollReveal().reveal(".gallery", { delay: 500 });
+ScrollReveal().reveal(".action", { delay: 500 });
+ScrollReveal().reveal(".contacts", { delay: 500 });
+
 })();
 
 // header-fixed end
